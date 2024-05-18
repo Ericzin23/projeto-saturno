@@ -1,0 +1,102 @@
+.menu-button {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #212529;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #e9ecef;
+}
+
+body {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar {
+    background-color: #333333 !important;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #224488;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+.project-name {
+    color: #FFA500;
+    margin-top: 10px;
+}

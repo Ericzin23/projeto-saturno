@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+            <div class="container">
+                <a class="btn btn-secondary ml-auto" href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h3 class="text-center">Resultado da enquete</h3>
+    </div>
+
+    <div class="container">
+        <ul>
+            {% for option in question.option_set.all %}
+                <li>{{ option.option_text }} -- {{ option.votes }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'app:vote' question.id %}">Votar novamente?</a>
+        <a href="{% url 'app:index' %}">Ver outras questões?</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

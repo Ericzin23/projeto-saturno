@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enquete</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+            <div class="container">
+                <a class="btn btn-secondary ml-auto" href="/admin">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h3 class="text-center">Escolha uma enquete:</h3>
+        <ul class="list-unstyled">
+            {% for question in questions %}
+                <li><a href="{% url 'app:vote' question.id %}" class="menu-button">{{ question.question_text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
